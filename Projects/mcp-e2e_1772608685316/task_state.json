@@ -1,0 +1,59 @@
+{
+  "task_id": "e2e_1772608685316",
+  "project": "mcp-e2e_1772608685316",
+  "title": "MCP triggered: notebooklm_connector::pull",
+  "description": "Triggered via MCP server",
+  "status": "FAILED",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-04T07:18:05.583Z",
+  "updated_at": "2026-03-04T07:18:06.158Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "antigravity",
+  "approved_at": "2026-03-04T07:18:05.671Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [
+      "https://competitor1.example.com",
+      "https://competitor2.example.com"
+    ],
+    "question": "What pricing strategies do competitors use?"
+  },
+  "output_path": "Projects/mcp-e2e_1772608685316/Output/",
+  "error": "WSL sqlite failed with code 1. Error: <3>WSL (13190 - Relay) ERROR: CreateProcessParseCommon:1005: getpwuid(1000) failed 0\n<3>WSL (13190 - Relay) ERROR: CreateProcessCommon:800: execvpe(sqlite3) failed: No such file or directory\n",
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-04T07:18:05.583Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-04T07:18:05.656Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-04T07:18:05.671Z",
+      "actor": "antigravity",
+      "reason": "MCP auto-approved"
+    },
+    {
+      "from": "APPROVED",
+      "to": "IN_PROGRESS",
+      "timestamp": "2026-03-04T07:18:05.687Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "FAILED",
+      "timestamp": "2026-03-04T07:18:06.158Z",
+      "actor": "nanoclaw",
+      "reason": "WSL sqlite failed with code 1. Error: <3>WSL (13190 - Relay) ERROR: CreateProcessParseCommon:1005: getpwuid(1000) failed 0\n<3>WSL (13190 - Relay) ERROR: CreateProcessCommon:800: execvpe(sqlite3) failed: No such file or directory\n"
+    }
+  ]
+}

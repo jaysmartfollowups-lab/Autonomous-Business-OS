@@ -1,0 +1,55 @@
+version: "3.8"
+
+services:
+  # === NanoClaw Sandbox Container ===
+  # Runs individual TypeScript connectors in isolation.
+  # Usage: docker-compose run --rm nanoclaw Tools/Connectors/notebooklm_connector.ts
+  nanoclaw:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      # Read-write: NanoClaw can write output and learnings
+      - ./Projects:/app/Projects
+      - ./Memory:/app/Memory
+      # Read-only: NanoClaw can read but not modify connectors/skills/system
+      - ./Skills:/app/Skills:ro
+      - ./References:/app/References:ro
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: "1.0"
+    # Auto-remove container when it exits
+    # Applied via docker-compose run --rm
+    networks:
+      - sandbox_net
+
+  # === Test runner ===
+  # Validates that the sandbox environment works end-to-end.
+  # Usage: docker-compose run --rm nanoclaw-test
+  nanoclaw-test:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      - ./Projects:/app/Projects
+      - ./Memory:/app/Memory
+      - ./Skills:/app/Skills:ro
+      - ./References:/app/References:ro
+    command: [ "System/test_sandbox.ts" ]
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: "1.0"
+    networks:
+      - sandbox_net
+
+networks:
+  sandbox_net:
+    driver: bridge
+    # NOTE: For production, add network restrictions here
+    # to prevent containers from accessing the internet by default

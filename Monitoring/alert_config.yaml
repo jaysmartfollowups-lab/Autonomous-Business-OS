@@ -1,0 +1,38 @@
+# === BOS Alert Configuration ===
+# Defines alert thresholds and routing for the notification system.
+
+alerts:
+  circuit_breaker:
+    description: "Connector has exceeded max failure threshold"
+    priority: CRITICAL
+    threshold: 5
+    action: "Notify human, disable connector"
+
+  container_crash:
+    description: "NanoClaw Docker container exited with non-zero code"
+    priority: CRITICAL
+    action: "Log error, transition task to FAILED, notify human"
+
+  approval_timeout:
+    description: "Human has not responded to approval request"
+    priority: INFO
+    reminder_intervals_hours: [4, 12, 24]
+    auto_cancel_hours: 48
+    action: "Send reminder, auto-cancel after timeout"
+
+  task_stuck:
+    description: "Task has been IN_PROGRESS for longer than expected"
+    priority: WARN
+    timeout_minutes: 60
+    action: "Notify human with task details"
+
+channels:
+  console:
+    enabled: true
+  # whatsapp:
+  #   enabled: false
+  #   webhook_url: "${WHATSAPP_WEBHOOK_URL}"
+  # telegram:
+  #   enabled: false
+  #   bot_token: "${TELEGRAM_BOT_TOKEN}"
+  #   chat_id: "${TELEGRAM_CHAT_ID}"

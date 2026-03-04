@@ -1,0 +1,22 @@
+{
+  "servers": {
+    "nanoclaw_sandbox": {
+      "url": "http://localhost:3002/mcp",
+      "description": "MCP server for triggering NanoClaw sandbox execution",
+      "status": "inactive"
+    }
+  },
+  "tools": {
+    "trigger_nanoclaw_sandbox": {
+      "description": "Triggers a NanoClaw task in a Docker sandbox",
+      "input_schema": {
+        "task_id": "string (required)",
+        "connector_name": "string (required)",
+        "action": "string: authenticate | push | pull | status | dry_run",
+        "payload": "object",
+        "sandbox": "boolean (default: true)",
+        "timeout_seconds": "number (default: 300)"
+      }
+    }
+  }
+}

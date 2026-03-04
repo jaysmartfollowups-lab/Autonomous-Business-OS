@@ -1,0 +1,58 @@
+{
+  "task_id": "mcp_test_1772609485361",
+  "project": "mcp-mcp_test_1772609485361",
+  "title": "MCP triggered: notebooklm_connector::pull",
+  "description": "Description: Execute notebooklm_connector action pull",
+  "status": "FAILED",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-04T07:31:25.564Z",
+  "updated_at": "2026-03-04T07:31:26.184Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "antigravity",
+  "approved_at": "2026-03-04T07:31:25.642Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [
+      "https://example.com"
+    ],
+    "question": "Bridge test"
+  },
+  "output_path": "Projects/mcp-mcp_test_1772609485361/Output/",
+  "error": "WSL sqlite failed with code 1. Error: Error: in prepare, no such table: messages\n",
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-04T07:31:25.564Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-04T07:31:25.626Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-04T07:31:25.642Z",
+      "actor": "antigravity",
+      "reason": "MCP auto-approved"
+    },
+    {
+      "from": "APPROVED",
+      "to": "IN_PROGRESS",
+      "timestamp": "2026-03-04T07:31:25.658Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "FAILED",
+      "timestamp": "2026-03-04T07:31:26.184Z",
+      "actor": "nanoclaw",
+      "reason": "WSL sqlite failed with code 1. Error: Error: in prepare, no such table: messages\n"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+    "task_id": "",
+    "project": "",
+    "title": "",
+    "description": "",
+    "status": "DRAFT",
+    "priority": "MEDIUM",
+    "created_at": "",
+    "updated_at": "",
+    "assigned_to": "",
+    "approved_by": null,
+    "approved_at": null,
+    "connector": "",
+    "input_payload": {},
+    "output_path": "",
+    "error": null,
+    "retry_count": 0,
+    "max_retries": 3,
+    "history": []
+}

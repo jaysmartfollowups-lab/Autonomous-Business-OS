@@ -1,0 +1,59 @@
+{
+  "task_id": "e2e_1772607594554",
+  "project": "mcp-e2e_1772607594554",
+  "title": "MCP triggered: notebooklm_connector::pull",
+  "description": "Triggered via MCP server",
+  "status": "FAILED",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-04T06:59:54.998Z",
+  "updated_at": "2026-03-04T06:59:55.768Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "antigravity",
+  "approved_at": "2026-03-04T06:59:55.070Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [
+      "https://competitor1.example.com",
+      "https://competitor2.example.com"
+    ],
+    "question": "What pricing strategies do competitors use?"
+  },
+  "output_path": "Projects/mcp-e2e_1772607594554/Output/",
+  "error": "Command failed: wsl -d Ubuntu-24.04 -e bash -c \"sqlite3 /root/NanoClaw/data/messages.db \\\"INSERT INTO messages (id, chat_jid, sender, sender_name, content, timestamp, is_from_me, is_bot_message) VALUES (hex(randomblob(16)), 'tg:6674448518', 'System', 'MCP', '@NanoClaw [MCP AUTOMATED TASK] Connector: notebooklm_connector. Action: pull. TaskID: e2e_1772607594554. Payload: {\"urls\":[\"https://competitor1.example.com\",\"https://competitor2.example.com\"],\"question\":\"What pricing strategies do competitors use?\"}', strftime('%Y-%m-%dT%H:%M:%f', 'now'), 0, 0);\\\"\"\n<3>WSL (13095 - Relay) ERROR: CreateProcessParseCommon:1005: getpwuid(1000) failed 0\npricing: -c: line 1: unexpected EOF while looking for matching `\"'\n",
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-04T06:59:54.998Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-04T06:59:55.050Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-04T06:59:55.069Z",
+      "actor": "antigravity",
+      "reason": "MCP auto-approved"
+    },
+    {
+      "from": "APPROVED",
+      "to": "IN_PROGRESS",
+      "timestamp": "2026-03-04T06:59:55.086Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "FAILED",
+      "timestamp": "2026-03-04T06:59:55.768Z",
+      "actor": "nanoclaw",
+      "reason": "Command failed: wsl -d Ubuntu-24.04 -e bash -c \"sqlite3 /root/NanoClaw/data/messages.db \\\"INSERT INTO messages (id, chat_jid, sender, sender_name, content, timestamp, is_from_me, is_bot_message) VALUES (hex(randomblob(16)), 'tg:6674448518', 'System', 'MCP', '@NanoClaw [MCP AUTOMATED TASK] Connector: notebooklm_connector. Action: pull. TaskID: e2e_1772607594554. Payload: {\"urls\":[\"https://competitor1.example.com\",\"https://competitor2.example.com\"],\"question\":\"What pricing strategies do competitors use?\"}', strftime('%Y-%m-%dT%H:%M:%f', 'now'), 0, 0);\\\"\"\n<3>WSL (13095 - Relay) ERROR: CreateProcessParseCommon:1005: getpwuid(1000) failed 0\npricing: -c: line 1: unexpected EOF while looking for matching `\"'\n"
+    }
+  ]
+}

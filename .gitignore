@@ -1,0 +1,12 @@
+node_modules/
+.env
+*.sqlite
+*.sqlite-journal
+*.sqlite-wal
+*.sqlite-shm
+.tmp/
+dist/
+*.js.map
+.DS_Store
+Thumbs.db
+dashboard/.next/

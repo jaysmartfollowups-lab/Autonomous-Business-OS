@@ -1,0 +1,44 @@
+{
+  "task_id": "task_1772564790421_ba02",
+  "project": "test-integration-q1",
+  "title": "Analyze Q1 competitor pricing",
+  "description": "CLI-initiated task using notebooklm_connector",
+  "status": "APPROVED",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-03T19:06:30.424Z",
+  "updated_at": "2026-03-03T22:11:10.446Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "human_operator",
+  "approved_at": "2026-03-03T22:11:10.446Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [],
+    "question": "What pricing strategies do competitors use?"
+  },
+  "output_path": "Projects/test-integration-q1/Output/",
+  "error": null,
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-03T19:06:30.424Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-03T19:06:30.531Z",
+      "actor": "nanoclaw",
+      "reason": "Task ready for review"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-03T22:11:10.446Z",
+      "actor": "human",
+      "reason": "Approved via dashboard"
+    }
+  ]
+}
