@@ -1,0 +1,58 @@
+{
+  "task_id": "mcp_test_1772634736842",
+  "project": "mcp-mcp_test_1772634736842",
+  "title": "MCP triggered: notebooklm_connector::pull",
+  "description": "Description: Execute notebooklm_connector action pull",
+  "status": "AWAITING_REVIEW",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-04T14:32:16.959Z",
+  "updated_at": "2026-03-04T14:32:17.453Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "antigravity",
+  "approved_at": "2026-03-04T14:32:17.016Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [
+      "https://example.com"
+    ],
+    "question": "Bridge test"
+  },
+  "output_path": "Projects/mcp-mcp_test_1772634736842/Output/",
+  "error": null,
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-04T14:32:16.959Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-04T14:32:17.002Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-04T14:32:17.016Z",
+      "actor": "antigravity",
+      "reason": "MCP auto-approved"
+    },
+    {
+      "from": "APPROVED",
+      "to": "IN_PROGRESS",
+      "timestamp": "2026-03-04T14:32:17.031Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "AWAITING_REVIEW",
+      "timestamp": "2026-03-04T14:32:17.452Z",
+      "actor": "nanoclaw",
+      "reason": "Completed in 100ms"
+    }
+  ]
+}
