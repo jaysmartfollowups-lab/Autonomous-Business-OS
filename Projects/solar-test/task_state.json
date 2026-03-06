@@ -1,0 +1,58 @@
+{
+  "task_id": "task_1772647558145_4dc7",
+  "project": "solar-test",
+  "title": "Marketing Campaign: Solar",
+  "description": "CLI-initiated task using notebooklm_connector",
+  "status": "AWAITING_REVIEW",
+  "priority": "MEDIUM",
+  "created_at": "2026-03-04T18:05:58.147Z",
+  "updated_at": "2026-03-04T18:05:58.335Z",
+  "assigned_to": "nanoclaw",
+  "approved_by": "system",
+  "approved_at": "2026-03-04T18:05:58.269Z",
+  "connector": "notebooklm_connector",
+  "input_payload": {
+    "urls": [],
+    "question": "General research query"
+  },
+  "output_path": "Projects/solar-test/Output/",
+  "error": null,
+  "retry_count": 0,
+  "max_retries": 3,
+  "history": [
+    {
+      "from": null,
+      "to": "DRAFT",
+      "timestamp": "2026-03-04T18:05:58.147Z",
+      "actor": "nanoclaw"
+    },
+    {
+      "from": "DRAFT",
+      "to": "AWAITING_HUMAN_APPROVAL",
+      "timestamp": "2026-03-04T18:05:58.241Z",
+      "actor": "nanoclaw",
+      "reason": "Task ready for review"
+    },
+    {
+      "from": "AWAITING_HUMAN_APPROVAL",
+      "to": "APPROVED",
+      "timestamp": "2026-03-04T18:05:58.269Z",
+      "actor": "system",
+      "reason": "Auto-approved via CLI"
+    },
+    {
+      "from": "APPROVED",
+      "to": "IN_PROGRESS",
+      "timestamp": "2026-03-04T18:05:58.289Z",
+      "actor": "nanoclaw",
+      "reason": "Starting execution"
+    },
+    {
+      "from": "IN_PROGRESS",
+      "to": "AWAITING_REVIEW",
+      "timestamp": "2026-03-04T18:05:58.334Z",
+      "actor": "nanoclaw",
+      "reason": "Completed in 0ms"
+    }
+  ]
+}

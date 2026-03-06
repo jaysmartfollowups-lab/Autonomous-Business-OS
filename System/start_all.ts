@@ -83,3 +83,6 @@ runService('MCP', BUSINESS_OS_DIR, 'npx', ['tsx', 'System/mcp_server.ts'], color
 
 // 4. NanoClaw (WSL Docker Sandbox)
 runService('NANOCLAW', ROOT_DIR, 'wsl', ['-d', 'Ubuntu-24.04', '-u', 'root', '--cd', '/root/NanoClaw', 'npm', 'run', 'dev'], colors.yellow);
+
+// 5. Obsidian Markdown Sync (SQLite -> Obsidian .md files)
+runService('OBSIDIAN', BUSINESS_OS_DIR, 'npx', ['tsx', 'System/obsidian_sync.ts'], colors.green);

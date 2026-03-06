@@ -1,7 +1,7 @@
 /**
  * task_watcher.ts — File Watcher for Auto-Execution
  *
- * Background service that watches Projects/*/task_state.json files
+ * Background service that watches Projects/<project>/task_state.json files
     * for state changes and auto - advances the workflow after human approval.
  *
  * Behavior:
@@ -349,3 +349,9 @@ export class TaskWatcher {
         }
     }
 }
+
+// Start the watcher
+const watcher = new TaskWatcher((msg) => {
+    console.log("[task_watcher] Broadcast:", JSON.stringify(msg));
+});
+watcher.start();
